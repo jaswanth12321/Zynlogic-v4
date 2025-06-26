@@ -60,9 +60,23 @@ const ProjectDetail = () => {
             <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
               {project.category}
             </span>
-            <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-              {project.type}
-            </span>
+            {project.websiteUrl ? (
+              <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
+                <a
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.type}
+                </a>
+              </span>
+            ) : (
+              <span
+                className="px-3 py-1 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 text-blue-800 rounded-full text-xs font-semibold shadow-sm transition-transform duration-150 hover:scale-105 select-none"
+              >
+                {project.type}
+              </span>
+            )}
           </div>
         </div>
 

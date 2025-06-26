@@ -19,6 +19,7 @@ export interface Project {
     rating: number;
   };
   videoUrl?: string;
+  websiteUrl?: string; // New optional field for project website URL
   
   // Enhanced project detail sections
   overview?: {
@@ -29,7 +30,8 @@ export interface Project {
   };
   
   projectInfo?: {
-    title?: string; // Default: "Project Info"
+    title?: string;
+    websiteUrl?: string; // Default: "Project Info"
     additionalDetails?: {
       label: string;
       value: string;
@@ -74,7 +76,7 @@ const imageUrls = [
 export const projects: Project[] = [
   {
     id: "project1",
-    title: "Juicy Chemistry",
+    title: "Olympiad",
     category: "E-Commerce",
     type: "Website",
     imageUrl: "/e-comm website 1.jpg",
@@ -82,12 +84,12 @@ export const projects: Project[] = [
     description: "A certified organic personal care brand with a focus on sustainability and clean beauty.",
     client: "Juicy Chemistry",
     year: 2023,
-    technologies: ["Next.js", "Tailwind CSS", "Stripe API"],
+    technologies: ["Next.js", "Tailwind CSS", "Stripe API","spring boot","PostgreSQL","Hostinger"],
     features: [
-      "Organic skincare product catalog",
-      "Seamless cart and checkout flow",
-      "Subscription-based product ordering",
-      "Eco-friendly brand storytelling"
+      "Customizable product recommendations",
+      "Subscription management system",
+      "Integrated payment gateway",
+      "User-friendly admin dashboard"
     ],
     review: {
       clientName: "Megha Asher",
@@ -95,23 +97,25 @@ export const projects: Project[] = [
       message: "Zynlogic understood our brand ethos perfectly and delivered a clean, high-performing site. We’re thrilled!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://enlightiq.in/"
   },
   {
     id: "project2",
-    title: "Chumbak",
+    title: "Meta E-Auction",
     category: "Portfolio",
     type: "Website",
-    imageUrl: "/e-comm website 1.jpg",
-    description: "A vibrant lifestyle brand with quirky designs across fashion and home.",
+    imageUrl: "/e-comm website 2.jpg",
+    detailImageUrl: "/e-comm website 2.jpg",
+    description: "A cutting-edge platform for online auctions, connecting buyers and sellers in real-time.",
     client: "Chumbak",
     year: 2024,
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["React", "TypeScript", "Tailwind CSS","spring boot","PostgreSQL","Hostinger"],
     features: [
-      "Stylish product showcases",
-      "Smooth shopping experience",
-      "Mobile-first responsive design",
-      "Easy returns and support"
+      "Real-time auction bidding",
+      "User-friendly interface",
+      "Secure payment integration",
+      "Comprehensive admin dashboard"
     ],
     review: {
       clientName: "Vivek Prabhakar",
@@ -119,31 +123,37 @@ export const projects: Project[] = [
       message: "Zynlogic captured our brand’s personality flawlessly. The new site is fun, fast, and customer-friendly!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://meta-e-auctionfront.vercel.app/"
   },
   {
     id: "project3",
-    title: "Apptivo",
-    category: "CRM",
+    title: "Maditailor",
+    category: "Hospital Tourism",
     type: "Website",
     imageUrl: "/crm website 2.jpg",
-    description: "A comprehensive cloud-based suite for business CRM and ERP needs.",
-    client: "Apptivo",
-    year: 2024,
-    technologies: ["Next.js", "Stripe", "Vercel"],
+    detailImageUrl: "/crm website 2.jpg",
+    description: "A modern hospital tourism platform offering end-to-end medical and wellness services, including treatment coordination, travel arrangements, and multilingual support for international patients.",
+    client: "Maditailor",
+    year: 2025,
+    technologies: ["React", "Stripe", "Vercel","Spring Boot","PostgreSQL","Hostinger"],
     features: [
-      "Custom CRM workflows",
-      "Integrated invoicing tools",
-      "Role-based user access",
-      "Real-time analytics dashboard"
+       "Doctor and physiotherapy appointment booking",
+    "Spa and wellness service integration",
+    "Multilingual translator support",
+    "Flight and hotel booking assistance",
+    "Online pharmacy and prescription services",
+    "Real-time treatment progress tracking"
     ],
+   
     review: {
       clientName: "Bastin Gerald",
-      clientRole: "Founder & CEO, Apptivo",
+      clientRole: "Founder & CEO, Maditailor",
       message: "Zynlogic streamlined our platform’s UX and performance. A dependable and skilled tech partner.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://hospital-tourism-fe.vercel.app/"
   },
   {
     id: "project4",
@@ -167,7 +177,8 @@ export const projects: Project[] = [
       message: "Zynlogic brought clarity and structure to our complex platform. Outstanding execution and support!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://bitrix24.com"
   },
   {
     id: "project5",
@@ -191,7 +202,8 @@ export const projects: Project[] = [
       message: "Zynlogic transformed our food tech experience with intuitive design and flawless functionality.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://hungerybox.com"
   },
   {
     id: "project6",
@@ -215,7 +227,8 @@ export const projects: Project[] = [
       message: "Zynlogic delivered a high-performance platform that matches our premium food experience. Highly recommended!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://biryanibykilo.com"
   },
   {
     id: "project7",
@@ -239,7 +252,8 @@ export const projects: Project[] = [
       message: "Zynlogic built a travel platform that balances usability and scale. Excellent delivery and support!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://traveltriangle.com"
   },
   {
     id: "project8",
@@ -263,7 +277,8 @@ export const projects: Project[] = [
       message:"Zynlogic delivered a seamless travel booking platform beyond expectations. Truly impressive work!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://kiomoi.com"
   },
   {
     id: "project9",
@@ -287,7 +302,8 @@ export const projects: Project[] = [
       message: "Medmonks revolutionized our approach to medical tourism. Their seamless service and expert support made everything easy.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://medmonks.com"
   },
   {
     id: "project10",
@@ -311,7 +327,8 @@ export const projects: Project[] = [
       message: "Zynlogic delivered a robust healthcare solution with excellent support!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://healcard.com"
   },
   {
     id: "project11",
@@ -335,7 +352,8 @@ export const projects: Project[] = [
       message: "Zynlogic created a dynamic, user-centric platform for creative education. Truly exceptional!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://pearlacademy.com"
   },
   {
     id: "project12",
@@ -359,7 +377,8 @@ export const projects: Project[] = [
       message: "Zynlogic developed a transformative platform for modern management education. Exceptional work!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://welingkar.org"
   },
   {
     id: "project13",
@@ -383,7 +402,8 @@ export const projects: Project[] = [
       message: "Zynlogic created a smart, efficient recruitment platform. Outstanding results!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://jobvisit.com"
   },
   {
     id: "project14",
@@ -407,7 +427,8 @@ export const projects: Project[] = [
       message: "Zynlogic enhanced our recruitment platform with seamless AI integration. Highly impressive!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://hiremee.com"
   },
   {
     id: "project15",
@@ -431,7 +452,8 @@ export const projects: Project[] = [
       message:"Zynlogic created an innovative platform that streamlined our construction process. Highly efficient!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://ssvcinfra.com"
   },
   {
     id: "project16",
@@ -455,7 +477,8 @@ export const projects: Project[] = [
       message: "Zynlogic delivered a seamless platform for property solutions. Highly professional!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://propertypanther.com"
   },
   {
     id: "project17",
@@ -479,7 +502,8 @@ export const projects: Project[] = [
       message:"Zynlogic built a seamless, user-friendly car rental platform. Highly reliable!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://mychoize.com"
   },
   {
     id: "project18",
@@ -503,7 +527,8 @@ export const projects: Project[] = [
       message: "Zynlogic crafted a seamless platform for luxury car buying. Exceptional service!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://carstreetindia.com"
   }, {
     id: "project19",
     title: "Spotbid",
@@ -526,7 +551,8 @@ export const projects: Project[] = [
       message: "Zynlogic transformed our auction process with efficiency and transparency. Highly recommended!",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://spotbid.com"
   },
   {
     id: "project20",
@@ -550,7 +576,8 @@ export const projects: Project[] = [
       message: "This platform has transformed our online presence and significantly boosted our sales.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://metaeauction.com"
   },
   {
     id: "project21",
@@ -574,7 +601,8 @@ export const projects: Project[] = [
       message: "The mobile app has exceeded our expectations in both design and functionality.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://bharatkart.com"
   },
   {
     id: "project22",
@@ -598,7 +626,8 @@ export const projects: Project[] = [
       message: "This app has transformed our workflow and boosted team productivity significantly.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://trendsi.com"
   },
   {
     id: "project23",
@@ -622,7 +651,8 @@ export const projects: Project[] = [
       message: "This mobile CRM has transformed how our sales team operates in the field.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://automatesales.com"
   },
   {
     id: "project24",
@@ -646,7 +676,8 @@ export const projects: Project[] = [
       message: "This CRM app has revolutionized how we handle customer relationships and boosted conversion rates.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://salesmate.com"
   },
   {
     id: "project25",
@@ -670,7 +701,8 @@ export const projects: Project[] = [
       message: "This app has transformed our food delivery service and significantly increased our customer base.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://dinedelicious.com"
   },
   {
     id: "project26",
@@ -694,7 +726,8 @@ export const projects: Project[] = [
       message: "This app has helped us reach a niche market of food enthusiasts and elevated our service.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://thefoodstop.com"
   },
   {
     id: "project27",
@@ -718,7 +751,8 @@ export const projects: Project[] = [
       message: "This app has revolutionized our grocery delivery service and significantly improved user retention.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://tourismanalytics.com"
   },
   {
     id: "project28",
@@ -742,7 +776,8 @@ export const projects: Project[] = [
       message: "This application has transformed the eyewear shopping experience and increased our conversion rates.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://indiatouristplaces.com"
   },
   {
     id: "project29",
@@ -766,7 +801,8 @@ export const projects: Project[] = [
       message: "This application has revolutionized how customers shop for furniture and significantly reduced returns.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://docindia.com"
   },
   {
     id: "project30",
@@ -790,7 +826,8 @@ export const projects: Project[] = [
       message: "This application has streamlined our booking process and significantly improved user experience.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://medcart.com"
   },
   {
     id: "project31",
@@ -814,7 +851,8 @@ export const projects: Project[] = [
       message: "This application has significantly improved our mobile user engagement and conversion rates.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://personalisedlearningapp.com"
   },
   {
     id: "project32",
@@ -840,7 +878,8 @@ export const projects: Project[] = [
       message: "This application has transformed our ticketing process and significantly improved user experience.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://educateapp.com"
   },
   {
     id: "project33",
@@ -864,7 +903,8 @@ export const projects: Project[] = [
       message: "This application has helped us connect with parents and provide tailored shopping experiences.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://jobvisit.com"
   },
   {
     id: "project34",
@@ -888,7 +928,8 @@ export const projects: Project[] = [
       message: "This application has democratized investing and made it accessible to millions of users.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://vitaljobsindia.com"
   },
   {
     id: "project35",
@@ -912,7 +953,8 @@ export const projects: Project[] = [
       message: "This application has transformed the home services industry and improved service quality standards.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://hexahome.com"
   },
   {
     id: "project36",
@@ -936,7 +978,8 @@ export const projects: Project[] = [
       message: "This application has revolutionized the stock trading experience in India with its simplicity and performance.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://indiapropertydekho.com"
   },
   {
     id: "project37",
@@ -960,7 +1003,8 @@ export const projects: Project[] = [
       message: "This application has transformed healthcare accessibility and simplified medicine purchases for millions.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://autorentals.com"
   },
   {
     id: "project38",
@@ -984,7 +1028,8 @@ export const projects: Project[] = [
       message: "This application has transformed the fitness industry with its holistic approach to wellness.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://vcars.com"
   },
   {
     id: "project39",
@@ -1008,7 +1053,8 @@ export const projects: Project[] = [
       message: "This application has simplified the travel booking process and increased our customer satisfaction rates.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://bidkaro.com"
   },
   {
     id: "project40",
@@ -1032,7 +1078,8 @@ export const projects: Project[] = [
       message: "This application has democratized education and helped millions of students achieve their goals.",
       rating: 5
     },
-    videoUrl: "https://www.youtube.com/embed"
+    videoUrl: "https://www.youtube.com/embed",
+    websiteUrl: "https://cricketauction.com"
   },
  
 
@@ -1074,7 +1121,8 @@ export const projects: Project[] = [
           message: "The platform exceeded our expectations. Our students love the interactive features!",
           rating: 5
         },
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        websiteUrl: "https://educateinc.com"
       };
     }
     
@@ -1101,7 +1149,8 @@ export const projects: Project[] = [
           message: "The mobile app has significantly improved our customer engagement!",
           rating: 5
         },
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        websiteUrl: "https://client${projectId}.com"
       };
     }
     
@@ -1127,7 +1176,8 @@ export const projects: Project[] = [
         message: "Great work and excellent service!",
         rating: 4 + (i % 2)
       },
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      websiteUrl: "https://client${projectId}.com"
     };
   })
 ];

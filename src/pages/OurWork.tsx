@@ -52,9 +52,9 @@ const projectImages = {
 };
 
 const projectNames = {
-  project1: "Juicy Chemistry",
-  project2: "Chumbak",
-  project3: "Apptivo",
+  project1: "Enlightiq",
+  project2: "Meta E-Auction",
+  project3: "Maditailor",
   project4: "Bitrix24",
   project5: "Hungrybox",
   project6: "Biryani by kilo",
